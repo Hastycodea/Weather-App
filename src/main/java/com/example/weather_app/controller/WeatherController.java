@@ -22,7 +22,7 @@ public class WeatherController {
 
     @GetMapping("/weather")
     public String getWeather(@RequestParam("city") String city, Model model) {
-        String url = "http://api.openweathermap.org/data/2.5/weather?q" + city + "&appid=" + apiKey + "&units=metric";
+        String url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric";
         RestTemplate restTemplate = new RestTemplate();
         WeatherResponse weatherResponse = restTemplate.getForObject(url, WeatherResponse.class);
 

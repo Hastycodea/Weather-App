@@ -14,13 +14,11 @@ public class WeatherResponse {
     private Main main;
     private Wind wind;
 
+    @Setter
     @Getter
     public static class Sys {
         private String country;
 
-        public void setCountry(String country) {
-            this.country = country;
-        }
     }
 
     @Setter
@@ -42,7 +40,7 @@ public class WeatherResponse {
     @Setter
     @Getter
     public static class Wind {
-        private int speed;
+        private double speed;
 
     }
 
